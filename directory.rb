@@ -16,8 +16,8 @@ def print_header
   puts "-------------"
 end
 def print(names)
-names.each do |student|
-  puts student
+names.each do |name|
+  puts name
 end
 end
 def print_footer(names)
