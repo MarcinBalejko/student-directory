@@ -17,15 +17,16 @@ students
 end
 def print_header
   puts "The students of Villains Academy"
-  puts "-------------"
+  puts "--------------------------------"
 end
 def print(students)
 students.each_with_index do |student, index|
   indexplusone = index + 1
-  puts "#{indexplusone}. #{student[:name]} (#{student[:cohort]} cohort)"
+  puts "#{indexplusone}. #{student[:name]} (#{student[:cohort]} cohort)".center(50)
 end
 end
 def print_footer(students)
+  puts "--------------------------------"
   puts "Overall, we have #{students.count} great students."
 end
 students = input_students
