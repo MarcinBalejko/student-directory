@@ -13,7 +13,7 @@ cohort_prompt = gets.chomp
    puts "Please enter the cohort"
    cohort_prompt = gets.chomp
  end
-students
+students.sort_by {|sym| sym[:cohort]}
 end
 def print_header
   puts "The students of Villains Academy"
@@ -22,7 +22,7 @@ end
 def print(students)
 students.each_with_index do |student, index|
   indexplusone = index + 1
-  puts "#{indexplusone}. #{student[:name]} (#{student[:cohort]} cohort)".center(50)
+  puts "#{indexplusone}. #{student[:name]} (#{student[:cohort]} cohort)".center(30)
 end
 end
 def print_footer(students)
