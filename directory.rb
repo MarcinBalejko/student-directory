@@ -7,7 +7,11 @@ name = gets.chomp
 cohort_prompt = gets.chomp
  while !name.empty? do
    students << {name: name, cohort: cohort_prompt}
-   puts "now we have #{students.count} students"
+   if students.length == 1
+     puts "Now we have #{students.count} student"
+     else
+       puts "Now we have #{students.count} students"
+     end
    puts "Please enter the name of the student"
    name = gets.chomp
    puts "Please enter the cohort"
