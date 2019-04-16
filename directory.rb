@@ -56,10 +56,10 @@ def print_footer(students)
 end
 interactive_menu
 students = input_students
-#if students.length != 0
+if students.length != 0
 print_header
 print(students)
 print_footer(students)
-#else
-#  interactive_menu
-#end
+else
+  interactive_menu
+end
