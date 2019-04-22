@@ -8,8 +8,8 @@ def save_students
   end
 file.close
 end
-def load_students
-  file = File.open("students.csv", "r")
+def load_students(filename = "students.csv")
+  file = File.open(filename, "r")
   file.readlines.each do |line|
     name, cohort = line.chomp.split(",")
     @students << {name: name, cohort: cohort}
@@ -86,4 +86,5 @@ def print_footer
   puts "--------------------------------"
   puts "Overall, we have #{@students.count} great students."
 end
+load_students
 interactive_menu
